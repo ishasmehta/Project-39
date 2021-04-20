@@ -141,9 +141,9 @@ function draw() {
     //set lifetime of the game objects so that they are never destroyed
     
     
-    if(touches.length>0 || keyDown("SPACE")) {      
+    if(touches.length>0 || mousePressedOver(restart)) {      
       reset();
-      touches = []
+      touches = [];
     }
   }
   
@@ -160,6 +160,7 @@ function reset(){
   
   
   trex.changeAnimation("running",trex_running);
+  trex.x = 50;
   
   score = 0;
   
